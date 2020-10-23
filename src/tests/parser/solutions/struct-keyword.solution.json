@@ -1,0 +1,299 @@
+{
+    "type": "ThriftDocument",
+    "body": [
+        {
+            "type": "StructDefinition",
+            "name": {
+                "type": "Identifier",
+                "value": "Test",
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 8,
+                        "index": 7
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 12,
+                        "index": 11
+                    }
+                }
+            },
+            "fields": [
+                {
+                    "type": "FieldDefinition",
+                    "name": {
+                        "type": "Identifier",
+                        "value": "i32",
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 21,
+                                "index": 34
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 24,
+                                "index": 37
+                            }
+                        }
+                    },
+                    "fieldID": {
+                        "type": "FieldID",
+                        "value": 1,
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 5,
+                                "index": 18
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 7,
+                                "index": 20
+                            }
+                        }
+                    },
+                    "fieldType": {
+                        "type": "I32Keyword",
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 17,
+                                "index": 30
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 20,
+                                "index": 33
+                            }
+                        }
+                    },
+                    "requiredness": "required",
+                    "defaultValue": null,
+                    "comments": [],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 5,
+                            "index": 18
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 24,
+                            "index": 37
+                        }
+                    }
+                },
+                {
+                    "type": "FieldDefinition",
+                    "name": {
+                        "type": "Identifier",
+                        "value": "enum",
+                        "loc": {
+                            "start": {
+                                "line": 3,
+                                "column": 21,
+                                "index": 58
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 25,
+                                "index": 62
+                            }
+                        }
+                    },
+                    "fieldID": {
+                        "type": "FieldID",
+                        "value": 2,
+                        "loc": {
+                            "start": {
+                                "line": 3,
+                                "column": 5,
+                                "index": 42
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 7,
+                                "index": 44
+                            }
+                        }
+                    },
+                    "fieldType": {
+                        "type": "I64Keyword",
+                        "loc": {
+                            "start": {
+                                "line": 3,
+                                "column": 17,
+                                "index": 54
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 20,
+                                "index": 57
+                            }
+                        }
+                    },
+                    "requiredness": "required",
+                    "defaultValue": null,
+                    "comments": [],
+                    "loc": {
+                        "start": {
+                            "line": 3,
+                            "column": 5,
+                            "index": 42
+                        },
+                        "end": {
+                            "line": 3,
+                            "column": 25,
+                            "index": 62
+                        }
+                    }
+                },
+                {
+                    "type": "FieldDefinition",
+                    "name": {
+                        "type": "Identifier",
+                        "value": "double",
+                        "loc": {
+                            "start": {
+                                "line": 4,
+                                "column": 24,
+                                "index": 86
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 30,
+                                "index": 92
+                            }
+                        }
+                    },
+                    "fieldID": {
+                        "type": "FieldID",
+                        "value": 3,
+                        "loc": {
+                            "start": {
+                                "line": 4,
+                                "column": 5,
+                                "index": 67
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 7,
+                                "index": 69
+                            }
+                        }
+                    },
+                    "fieldType": {
+                        "type": "DoubleKeyword",
+                        "loc": {
+                            "start": {
+                                "line": 4,
+                                "column": 17,
+                                "index": 79
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 23,
+                                "index": 85
+                            }
+                        }
+                    },
+                    "requiredness": "optional",
+                    "defaultValue": null,
+                    "comments": [],
+                    "loc": {
+                        "start": {
+                            "line": 4,
+                            "column": 5,
+                            "index": 67
+                        },
+                        "end": {
+                            "line": 4,
+                            "column": 30,
+                            "index": 92
+                        }
+                    }
+                },
+                {
+                    "type": "FieldDefinition",
+                    "name": {
+                        "type": "Identifier",
+                        "value": "list",
+                        "loc": {
+                            "start": {
+                                "line": 5,
+                                "column": 24,
+                                "index": 116
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 28,
+                                "index": 120
+                            }
+                        }
+                    },
+                    "fieldID": {
+                        "type": "FieldID",
+                        "value": 4,
+                        "loc": {
+                            "start": {
+                                "line": 5,
+                                "column": 5,
+                                "index": 97
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 7,
+                                "index": 99
+                            }
+                        }
+                    },
+                    "fieldType": {
+                        "type": "StringKeyword",
+                        "loc": {
+                            "start": {
+                                "line": 5,
+                                "column": 17,
+                                "index": 109
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 23,
+                                "index": 115
+                            }
+                        }
+                    },
+                    "requiredness": "required",
+                    "defaultValue": null,
+                    "comments": [],
+                    "loc": {
+                        "start": {
+                            "line": 5,
+                            "column": 5,
+                            "index": 97
+                        },
+                        "end": {
+                            "line": 5,
+                            "column": 28,
+                            "index": 120
+                        }
+                    }
+                }
+            ],
+            "comments": [],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "index": 0
+                },
+                "end": {
+                    "line": 6,
+                    "column": 2,
+                    "index": 122
+                }
+            }
+        }
+    ]
+}

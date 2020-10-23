@@ -1,7 +1,7 @@
 {
-  "name": "@creditkarma/thrift-parser",
-  "version": "1.2.0",
-  "description": "A parser for Thrift written in TypeScript",
+  "name": "@lancewuz/thrift-parser",
+  "version": "0.0.0",
+  "description": "A parser for Thrift",
   "main": "./dist/main/index.js",
   "types": "./dist/main/index.d.ts",
   "bin": {
@@ -36,9 +36,12 @@
   "author": "Credit Karma",
   "repository": {
     "type": "git",
-    "url": "https://github.com/creditkarma/thrift-parser.git"
+    "url": "git@github.com:lancewuz/thrift-parser.git"
   },
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
