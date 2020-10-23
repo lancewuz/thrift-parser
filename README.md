@@ -9,7 +9,7 @@ This repo is forked from [creditkarma/thrift-parser](https://github.com/creditka
 A successful parse returns a ThriftDocument object. An unsuccessful parse returns a ThriftErrors object.
 
 ```js
-import { parse, ThriftDocument } from '@creditkarma/thrift-parser'
+import { parse, ThriftDocument } from '@lancewuz/thrift-parser'
 
 
 const rawThrift: string =`
