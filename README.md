@@ -1,6 +1,8 @@
-# TypeScript Thrift Parser
+# Thrift Parser
 
-A parser for Thrift written in TypeScript. The resulting AST can be used to codegen JavaScript from a Thrift file, or just to inspect the Thrift structure.
+A parser for Thrift.
+
+This repo is forked from [creditkarma/thrift-parser](https://github.com/creditkarma/thrift-parser).
 
 ## Usage
 

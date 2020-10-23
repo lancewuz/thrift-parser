@@ -60,6 +60,8 @@ import {
 
 import { ErrorReporter, noopReporter } from './debugger'
 
+import { KEYWORDS } from './keywords'
+
 export interface Parser {
     parse(): ThriftDocument
     synchronize(): void
@@ -92,6 +94,8 @@ class ParseError extends Error {
         this.loc = loc
     }
 }
+
+const fieldNameSyntaxTypes = [SyntaxType.Identifier, ...Object.values(KEYWORDS)]
 
 export function createParser(
     tokens: Array<Token>,
@@ -773,7 +777,8 @@ export function createParser(
         const fieldID: FieldID | null = parseFieldId()
         const fieldRequired: FieldRequired | null = parserequireValuedness()
         const fieldType: FieldType = parseFieldType()
-        const _nameToken: Token | null = consume(SyntaxType.Identifier)
+
+        const _nameToken: Token | null = consume(...fieldNameSyntaxTypes)
         const nameToken: Token = requireValue(
             _nameToken,
             `Unable to find identifier for field`,

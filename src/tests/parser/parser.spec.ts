@@ -193,6 +193,19 @@ describe('Parser', () => {
         assert.deepEqual(objectify(thrift), expected)
     })
 
+    it('should correctly parse the syntax of a struct with keyword names', () => {
+        const content: string = loadSource('struct-keyword')
+        const scanner: Scanner = createScanner(content)
+        const tokens: Array<Token> = scanner.scan()
+
+        const parser: Parser = createParser(tokens)
+        const thrift: ThriftDocument = parser.parse()
+
+        const expected: any = loadSolution('struct-keyword')
+
+        assert.deepEqual(objectify(thrift), expected)
+    })
+
     it('should correctly parse the syntax of an enum', () => {
         const content: string = loadSource('enum')
         const scanner: Scanner = createScanner(content)
