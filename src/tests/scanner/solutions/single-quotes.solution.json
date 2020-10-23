@@ -1,0 +1,66 @@
+[
+    {
+        "type": "StringLiteral",
+        "text": "this is a \"test\"",
+        "loc": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "index": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 20,
+                "index": 19
+            }
+        }
+    },
+    {
+        "type": "StringLiteral",
+        "text": "this isn't a test",
+        "loc": {
+            "start": {
+                "line": 2,
+                "column": 1,
+                "index": 20
+            },
+            "end": {
+                "line": 2,
+                "column": 21,
+                "index": 40
+            }
+        }
+    },
+    {
+        "type": "StringLiteral",
+        "text": "this is a 'test'",
+        "loc": {
+            "start": {
+                "line": 3,
+                "column": 1,
+                "index": 41
+            },
+            "end": {
+                "line": 3,
+                "column": 21,
+                "index": 61
+            }
+        }
+    },
+    {
+        "type": "EOF",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 3,
+                "column": 21,
+                "index": 62
+            },
+            "end": {
+                "line": 4,
+                "column": 1,
+                "index": 62
+            }
+        }
+    }
+]

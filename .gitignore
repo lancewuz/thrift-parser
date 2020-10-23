@@ -1,0 +1,26 @@
+.DS_Store
+
+# Tmp files
+tmp/
+*.tmp
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Typescript artifacts
+dist
+
+# nyc artifacts
+coverage/
+.nyc_output/
+
+# test artifacts
+thrift-json/
