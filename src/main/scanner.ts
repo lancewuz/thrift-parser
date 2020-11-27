@@ -305,6 +305,7 @@ export function createScanner(
         addToken(SyntaxType.CommentLine, comment.trim())
     }
 
+    // TODO: optimize the logic
     function multilineComment(): void {
         let comment: string = ''
         let cursor: number = 0
@@ -313,7 +314,7 @@ export function createScanner(
             if (
                 current() === '\n' ||
                 isAtEnd() ||
-                (current() !== '/' && current() !== '*' && current() !== ' ')
+                (current() !== '/' && current() !== '*')
             ) {
                 break
             } else {
@@ -324,6 +325,13 @@ export function createScanner(
         while (true) {
             if (current() === '\n') {
                 nextLine()
+            }
+
+            // A comment goes until we find a comment terminator (*/).
+            if ((peek() === '*' && peekNext() === '/') || isAtEnd()) {
+                advance()
+                advance()
+                break
             }
 
             if (
