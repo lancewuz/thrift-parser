@@ -314,7 +314,8 @@ export function createScanner(
             if (
                 current() === '\n' ||
                 isAtEnd() ||
-                (current() !== '/' && current() !== '*')
+                (current() !== '/' && current() !== '*') ||
+                (current() === '*' && peek() === '*' && peekNext() === '/')
             ) {
                 break
             } else {

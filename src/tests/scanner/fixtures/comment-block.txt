@@ -1,7 +1,10 @@
 /* This is a struct
  * it does things
  */
+/**
+*/
 /*
 */
-/** */
 /**/
+/***/
+/** */

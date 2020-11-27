@@ -5,6 +5,7 @@ const rawThrift: string = `
 */
 
 struct User {
+    /**/
     1: string k1
     /** */
     2: string k2
