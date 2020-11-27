@@ -16,18 +16,98 @@
         }
     },
     {
+        "type": "CommentBlock",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 4,
+                "column": 1,
+                "index": 42
+            },
+            "end": {
+                "line": 5,
+                "column": 3,
+                "index": 48
+            }
+        }
+    },
+    {
+        "type": "CommentBlock",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 6,
+                "column": 1,
+                "index": 49
+            },
+            "end": {
+                "line": 7,
+                "column": 3,
+                "index": 54
+            }
+        }
+    },
+    {
+        "type": "CommentBlock",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 8,
+                "column": 1,
+                "index": 55
+            },
+            "end": {
+                "line": 8,
+                "column": 5,
+                "index": 59
+            }
+        }
+    },
+    {
+        "type": "CommentBlock",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 9,
+                "column": 1,
+                "index": 60
+            },
+            "end": {
+                "line": 9,
+                "column": 6,
+                "index": 65
+            }
+        }
+    },
+    {
+        "type": "CommentBlock",
+        "text": "",
+        "loc": {
+            "start": {
+                "line": 10,
+                "column": 1,
+                "index": 66
+            },
+            "end": {
+                "line": 10,
+                "column": 7,
+                "index": 72
+            }
+        }
+    },
+    {
         "type": "EOF",
         "text": "",
         "loc": {
             "start": {
-                "line": 3,
-                "column": 4,
-                "index": 42
+                "line": 10,
+                "column": 7,
+                "index": 73
             },
             "end": {
-                "line": 4,
+                "line": 11,
                 "column": 1,
-                "index": 42
+                "index": 73
             }
         }
     }

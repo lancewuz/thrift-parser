@@ -1,9 +1,20 @@
 import * as t from '../main/index'
 
 const rawThrift: string = `
-  struct MyStruct {
-    1: required i32 list
-  }
+/*
+*/
+
+struct User {
+    /**/
+    1: string k1
+    /** */
+    2: string k2
+    /** k3 */
+    3: string k3
+}
+
+/* We */
+enum Avatar {}
 `
 
 const thriftAST: t.ThriftDocument | t.ThriftErrors = t.parse(rawThrift)
