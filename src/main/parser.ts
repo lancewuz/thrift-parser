@@ -1006,9 +1006,13 @@ export function createParser(
 
                 // trailing comma
                 if (check(SyntaxType.RightBraceToken)) {
+                    properties[properties.length - 1].comments = getComments()
                     break
                 }
+
+                properties[properties.length - 1].comments = getComments()
             } else {
+                properties[properties.length - 1].comments = getComments()
                 break
             }
         }
