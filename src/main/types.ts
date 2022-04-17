@@ -310,6 +310,7 @@ export interface PropertyAssignment extends SyntaxNode {
     type: SyntaxType.PropertyAssignment
     name: ConstValue
     initializer: ConstValue
+    comments?: Array<Comment>
 }
 
 export interface Identifier extends SyntaxNode {

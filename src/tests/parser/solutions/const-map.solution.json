@@ -85,6 +85,7 @@
                                 }
                             }
                         },
+                        "comments": [],
                         "initializer": {
                             "type": "StringLiteral",
                             "value": "world",
@@ -132,6 +133,7 @@
                                 }
                             }
                         },
+                        "comments": [],
                         "initializer": {
                             "type": "StringLiteral",
                             "value": "bar",
@@ -273,6 +275,7 @@
                                 }
                             }
                         },
+                        "comments": [],
                         "initializer": {
                             "type": "StringLiteral",
                             "value": "world",
@@ -320,6 +323,24 @@
                                 }
                             }
                         },
+                        "comments": [
+                            {
+                                "loc": {
+                                    "end": {
+                                        "column": 24,
+                                        "index": 176,
+                                        "line": 5
+                                    },
+                                    "start": {
+                                        "column": 19,
+                                        "index": 171,
+                                        "line": 5
+                                    }
+                                },
+                                "type": "CommentLine",
+                                "value": "cm"
+                            }
+                        ],
                         "initializer": {
                             "type": "StringLiteral",
                             "value": "bar",
@@ -359,7 +380,7 @@
                     "end": {
                         "line": 6,
                         "column": 2,
-                        "index": 172
+                        "index": 178
                     }
                 }
             },
@@ -373,7 +394,7 @@
                 "end": {
                     "line": 6,
                     "column": 2,
-                    "index": 172
+                    "index": 178
                 }
             }
         }
