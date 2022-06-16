@@ -274,9 +274,12 @@ export function createParser(
             if (check(SyntaxType.CommentBlock, SyntaxType.CommentLine)) {
                 advance()
             } else {
-                functions.push(parseFunction())
+                const func = parseFunction()
+                functions.push(func)
+                const nextToken = currentToken()
+                func.comments = [...func.comments, ...getLineComments()]
 
-                if (isStatementBeginning(currentToken())) {
+                if (isStatementBeginning(nextToken)) {
                     throw reportError(
                         `Closing curly brace expected, but new statement found`,
                     )
@@ -600,11 +603,14 @@ export function createParser(
             if (check(SyntaxType.CommentBlock, SyntaxType.CommentLine)) {
                 advance()
             } else {
-                members.push(parseEnumMember())
+                const member = parseEnumMember()
+                members.push(member)
 
                 // consume list separator if there is one
                 readListSeparator()
-                if (isStatementBeginning(currentToken())) {
+                const nextToken = currentToken()
+                member.comments = [...member.comments, ...getLineComments()]
+                if (isStatementBeginning(nextToken)) {
                     throw reportError(
                         `Closing curly brace expected, but new statement found`,
                     )
@@ -754,9 +760,11 @@ export function createParser(
             if (check(SyntaxType.CommentBlock, SyntaxType.CommentLine)) {
                 advance()
             } else {
-                fields.push(parseField())
-
-                if (isStatementBeginning(currentToken())) {
+                const field = parseField()
+                const nextToken = currentToken()
+                field.comments = [...field.comments, ...getLineComments()]
+                fields.push(field)
+                if (isStatementBeginning(nextToken)) {
                     throw reportError(
                         `Closing curly brace expected, but new statement found`,
                     )
@@ -1278,6 +1286,19 @@ export function createParser(
         const current: Array<Comment> = comments
         comments = []
         return current
+    }
+
+    function getLineComments(): Array<Comment> {
+        const lineComments: Array<Comment> = []
+        while (comments.length > 0) {
+            if (comments[0].type === SyntaxType.CommentLine) {
+                lineComments.push(comments.shift() as Comment)
+            } else {
+                break
+            }
+        }
+
+        return lineComments
     }
 
     function reportError(msg: string): Error {
