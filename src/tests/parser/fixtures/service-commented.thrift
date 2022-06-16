@@ -1,4 +1,4 @@
 service Test {
-    bool test()
+    bool test() // tail
     # void ping()
 }
