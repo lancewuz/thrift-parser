@@ -60,18 +60,18 @@
                         {
                             "loc": {
                                 "end": {
-                                    "column": 18,
-                                    "index": 48,
-                                    "line": 3
+                                    "column": 24,
+                                    "index": 38,
+                                    "line": 2
                                 },
                                 "start": {
-                                    "column": 5,
-                                    "index": 35,
-                                    "line": 3
+                                    "column": 17,
+                                    "index": 31,
+                                    "line": 2
                                 }
                             },
                             "type": "CommentLine",
-                            "value": "void ping()"
+                            "value": "tail"
                         }
                     ],
                     "oneway": false,
@@ -100,7 +100,7 @@
                 "end": {
                     "line": 4,
                     "column": 2,
-                    "index": 50
+                    "index": 58
                 }
             }
         }

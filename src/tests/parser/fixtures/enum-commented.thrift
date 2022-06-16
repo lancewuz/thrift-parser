@@ -1,4 +1,4 @@
 enum Test {
-    ONE,
+    ONE, /* tail */
     # TWO
 }

@@ -277,7 +277,10 @@ export function createParser(
                 const func = parseFunction()
                 functions.push(func)
                 const nextToken = currentToken()
-                func.comments = [...func.comments, ...getLineComments()]
+                const tailComment = getTailComment(func.loc.end.line)
+                if (tailComment) {
+                    func.comments.push(tailComment)
+                }
 
                 if (isStatementBeginning(nextToken)) {
                     throw reportError(
@@ -608,8 +611,13 @@ export function createParser(
 
                 // consume list separator if there is one
                 readListSeparator()
+
                 const nextToken = currentToken()
-                member.comments = [...member.comments, ...getLineComments()]
+                const tailComment = getTailComment(member.loc.end.line)
+                if (tailComment) {
+                    member.comments.push(tailComment)
+                }
+
                 if (isStatementBeginning(nextToken)) {
                     throw reportError(
                         `Closing curly brace expected, but new statement found`,
@@ -657,7 +665,7 @@ export function createParser(
             name: createIdentifier(nameToken.text, nameToken.loc),
             initializer,
             annotations,
-            comments: getComments(),
+            comments: getSelfComments(loc.end.line),
             loc,
         }
     }
@@ -762,7 +770,10 @@ export function createParser(
             } else {
                 const field = parseField()
                 const nextToken = currentToken()
-                field.comments = [...field.comments, ...getLineComments()]
+                const tailComment = getTailComment(field.loc.end.line)
+                if (tailComment) {
+                    field.comments.push(tailComment)
+                }
                 fields.push(field)
                 if (isStatementBeginning(nextToken)) {
                     throw reportError(
@@ -1288,17 +1299,25 @@ export function createParser(
         return current
     }
 
-    function getLineComments(): Array<Comment> {
-        const lineComments: Array<Comment> = []
+    function getTailComment(endLine: number): Comment | undefined {
+        if (comments.length > 0) {
+            if (comments[0].loc.end.line === endLine) {
+                return comments.shift() as Comment
+            }
+        }
+    }
+
+    function getSelfComments(line: number): Array<Comment> {
+        const selfComments: Array<Comment> = []
         while (comments.length > 0) {
-            if (comments[0].type === SyntaxType.CommentLine) {
-                lineComments.push(comments.shift() as Comment)
+            if (comments[0].loc.end.line <= line) {
+                selfComments.push(comments.shift() as Comment)
             } else {
                 break
             }
         }
 
-        return lineComments
+        return selfComments
     }
 
     function reportError(msg: string): Error {

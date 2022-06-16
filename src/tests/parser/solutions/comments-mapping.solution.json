@@ -313,24 +313,7 @@
               }
             }
           },
-          "comments": [
-            {
-              "loc": {
-                "end": {
-                  "column": 24,
-                  "index": 259,
-                  "line": 20
-                },
-                "start": {
-                  "column": 3,
-                  "index": 238,
-                  "line": 20
-                }
-              },
-              "type": "CommentLine",
-              "value": "Enum field comment"
-            }
-          ],
+          "comments": [],
           "loc": {
             "start": {
               "line": 19,
@@ -363,7 +346,24 @@
             }
           },
           "initializer": null,
-          "comments": [],
+          "comments": [
+            {
+              "loc": {
+                "end": {
+                  "column": 24,
+                  "index": 259,
+                  "line": 20
+                },
+                "start": {
+                  "column": 3,
+                  "index": 238,
+                  "line": 20
+                }
+              },
+              "type": "CommentLine",
+              "value": "Enum field comment"
+            }
+          ],
           "loc": {
             "start": {
               "line": 21,
@@ -511,24 +511,7 @@
               }
             }
           },
-          "comments": [
-            {
-              "loc": {
-                "end": {
-                  "column": 26,
-                  "index": 358,
-                  "line": 29
-                },
-                "start": {
-                  "column": 3,
-                  "index": 335,
-                  "line": 29
-                }
-              },
-              "type": "CommentLine",
-              "value": "Struct field comment"
-            }
-          ],
+          "comments": [],
           "loc": {
             "start": {
               "line": 28,
@@ -594,7 +577,24 @@
           },
           "requiredness": null,
           "defaultValue": null,
-          "comments": [],
+          "comments": [
+            {
+              "loc": {
+                "end": {
+                  "column": 26,
+                  "index": 358,
+                  "line": 29
+                },
+                "start": {
+                  "column": 3,
+                  "index": 335,
+                  "line": 29
+                }
+              },
+              "type": "CommentLine",
+              "value": "Struct field comment"
+            }
+          ],
           "loc": {
             "start": {
               "line": 30,
