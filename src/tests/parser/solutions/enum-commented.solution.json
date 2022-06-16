@@ -39,7 +39,24 @@
                         }
                     },
                     "initializer": null,
-                    "comments": [],
+                    "comments": [
+                        {
+                            "loc": {
+                                "end": {
+                                    "column": 10,
+                                    "index": 30,
+                                    "line": 3
+                                },
+                                "start": {
+                                    "column": 5,
+                                    "index": 25,
+                                    "line": 3
+                                }
+                            },
+                            "type": "CommentLine",
+                            "value": "TWO"
+                        }
+                    ],
                     "loc": {
                         "start": {
                             "line": 2,

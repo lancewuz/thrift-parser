@@ -71,7 +71,24 @@
                     },
                     "requiredness": "required",
                     "defaultValue": null,
-                    "comments": [],
+                    "comments": [
+                        {
+                            "loc": {
+                                "end": {
+                                    "column": 31,
+                                    "index": 72,
+                                    "line": 3
+                                },
+                                "start": {
+                                    "column": 5,
+                                    "index": 46,
+                                    "line": 3
+                                }
+                            },
+                            "type": "CommentLine",
+                            "value": "2: required bool field2,"
+                        }
+                    ],
                     "loc": {
                         "start": {
                             "line": 2,
