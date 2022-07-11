@@ -1247,7 +1247,15 @@ export function createParser(
     // Does the current token match the given type
     function check(...types: Array<SyntaxType>): boolean {
         for (const type of types) {
-            if (type === currentToken().type) {
+            const currentType = currentToken().type
+            if (type === currentType) {
+                return true
+            } else if (
+                type === SyntaxType.Identifier &&
+                (currentType as string).includes('Keyword')
+            ) {
+                // Convert keyword to identifier
+                currentToken().type = SyntaxType.Identifier
                 return true
             }
         }

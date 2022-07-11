@@ -96,6 +96,54 @@
                     "index": 38
                 }
             }
+        },
+        {
+            "comments": [],
+            "loc": {
+                "end": {
+                    "column": 21,
+                    "index": 59,
+                    "line": 3
+                },
+                "start": {
+                    "column": 1,
+                    "index": 39,
+                    "line": 3
+                }
+            },
+            "name": {
+                "loc": {
+                    "end": {
+                        "column": 21,
+                        "index": 59,
+                        "line": 3
+                    },
+                    "start": {
+                        "column": 14,
+                        "index": 52,
+                        "line": 3
+                    }
+                },
+                "type": "Identifier",
+                "value": "service"
+            },
+            "scope": {
+                "loc": {
+                    "end": {
+                        "column": 13,
+                        "index": 51,
+                        "line": 3
+                    },
+                    "start": {
+                        "column": 11,
+                        "index": 49,
+                        "line": 3
+                    }
+                },
+                "type": "Identifier",
+                "value": "js"
+            },
+            "type": "NamespaceDefinition"
         }
     ]
 }
