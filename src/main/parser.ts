@@ -60,8 +60,6 @@ import {
 
 import { ErrorReporter, noopReporter } from './debugger'
 
-import { KEYWORDS } from './keywords'
-
 export interface Parser {
     parse(): ThriftDocument
     synchronize(): void
@@ -94,8 +92,6 @@ class ParseError extends Error {
         this.loc = loc
     }
 }
-
-const fieldNameSyntaxTypes = [SyntaxType.Identifier, ...Object.values(KEYWORDS)]
 
 export function createParser(
     tokens: Array<Token>,
@@ -611,18 +607,13 @@ export function createParser(
 
                 // consume list separator if there is one
                 readListSeparator()
-
-                const nextToken = currentToken()
+                consumeComments()
                 const tailComment = getTailComment(member.loc.end.line)
                 if (tailComment) {
                     member.comments.push(tailComment)
                 }
 
-                if (isStatementBeginning(nextToken)) {
-                    throw reportError(
-                        `Closing curly brace expected, but new statement found`,
-                    )
-                } else if (check(SyntaxType.EOF)) {
+                if (check(SyntaxType.EOF)) {
                     throw reportError(
                         `Closing curly brace expected but reached end of file`,
                     )
@@ -797,7 +788,7 @@ export function createParser(
         const fieldRequired: FieldRequired | null = parserequireValuedness()
         const fieldType: FieldType = parseFieldType()
 
-        const _nameToken: Token | null = consume(...fieldNameSyntaxTypes)
+        const _nameToken: Token | null = consume(SyntaxType.Identifier)
         const nameToken: Token = requireValue(
             _nameToken,
             `Unable to find identifier for field`,
