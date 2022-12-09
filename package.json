@@ -1,6 +1,6 @@
 {
   "name": "@lancewuz/thrift-parser",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A parser for Thrift",
   "main": "./dist/main/index.js",
   "types": "./dist/main/index.d.ts",
