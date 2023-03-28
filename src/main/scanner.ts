@@ -216,11 +216,12 @@ export function createScanner(
         }
 
         const literal: string = source.substring(startIndex, currentIndex)
-        const type: SyntaxType = KEYWORDS[literal]
 
-        if (type == null) {
+        const isKeyword = Object.keys(KEYWORDS).includes(literal)
+        if (!isKeyword) {
             addToken(SyntaxType.Identifier, literal)
         } else {
+            const type: SyntaxType = KEYWORDS[literal]
             addToken(type, literal)
         }
     }
