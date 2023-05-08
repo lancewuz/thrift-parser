@@ -139,6 +139,9 @@ export function createParser(
             case SyntaxType.IncludeKeyword:
                 return parseInclude()
 
+            case SyntaxType.CppIncludeKeyword:
+                return parseCppInclude()
+
             case SyntaxType.ConstKeyword:
                 return parseConst()
 
@@ -191,6 +194,13 @@ export function createParser(
             comments: getComments(),
             loc: createTextLocation(keywordToken.loc.start, pathToken.loc.end),
         }
+    }
+
+    // Skip cppInclude
+    function parseCppInclude() {
+        consume(SyntaxType.CppIncludeKeyword)
+        consume(SyntaxType.StringLiteral)
+        return null
     }
 
     // ServiceDefinition → 'service' Identifier ( 'extends' Identifier )? '{' Function* '} Annotations?'
