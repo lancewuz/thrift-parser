@@ -1,121 +1,121 @@
 {
-    "type": "ThriftDocument",
-    "body": [
+  "type": "ThriftDocument",
+  "body": [
+    {
+      "type": "StructDefinition",
+      "name": {
+        "type": "Identifier",
+        "value": "Test",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 8,
+            "index": 7
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "index": 11
+          }
+        }
+      },
+      "fields": [
         {
-            "type": "StructDefinition",
-            "name": {
-                "type": "Identifier",
-                "value": "Test",
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 8,
-                        "index": 7
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 12,
-                        "index": 11
-                    }
-                }
-            },
-            "fields": [
-                {
-                    "type": "FieldDefinition",
-                    "name": {
-                        "type": "Identifier",
-                        "value": "field1",
-                        "loc": {
-                            "start": {
-                                "line": 2,
-                                "column": 21,
-                                "index": 34
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 27,
-                                "index": 40
-                            }
-                        }
-                    },
-                    "fieldID": {
-                        "type": "FieldID",
-                        "value": 1,
-                        "loc": {
-                            "start": {
-                                "line": 2,
-                                "column": 5,
-                                "index": 18
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 7,
-                                "index": 20
-                            }
-                        }
-                    },
-                    "fieldType": {
-                        "type": "I32Keyword",
-                        "loc": {
-                            "start": {
-                                "line": 2,
-                                "column": 17,
-                                "index": 30
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 20,
-                                "index": 33
-                            }
-                        }
-                    },
-                    "requiredness": "required",
-                    "defaultValue": null,
-                    "comments": [
-                        {
-                            "loc": {
-                                "end": {
-                                    "column": 36,
-                                    "index": 49,
-                                    "line": 2
-                                },
-                                "start": {
-                                    "column": 29,
-                                    "index": 42,
-                                    "line": 2
-                                }
-                            },
-                            "type": "CommentLine",
-                            "value": "tail"
-                        }
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 2,
-                            "column": 5,
-                            "index": 18
-                        },
-                        "end": {
-                            "line": 2,
-                            "column": 28,
-                            "index": 41
-                        }
-                    }
-                }
-            ],
-            "comments": [],
+          "type": "FieldDefinition",
+          "name": {
+            "type": "Identifier",
+            "value": "field1",
             "loc": {
+              "start": {
+                "line": 2,
+                "column": 21,
+                "index": 34
+              },
+              "end": {
+                "line": 2,
+                "column": 27,
+                "index": 40
+              }
+            }
+          },
+          "fieldID": {
+            "type": "FieldID",
+            "value": 1,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 5,
+                "index": 18
+              },
+              "end": {
+                "line": 2,
+                "column": 7,
+                "index": 20
+              }
+            }
+          },
+          "fieldType": {
+            "type": "I32Keyword",
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 17,
+                "index": 30
+              },
+              "end": {
+                "line": 2,
+                "column": 20,
+                "index": 33
+              }
+            }
+          },
+          "requiredness": "required",
+          "defaultValue": null,
+          "comments": [
+            {
+              "type": "CommentLine",
+              "value": "tail",
+              "loc": {
                 "start": {
-                    "line": 1,
-                    "column": 1,
-                    "index": 0
+                  "line": 2,
+                  "column": 29,
+                  "index": 42
                 },
                 "end": {
-                    "line": 4,
-                    "column": 2,
-                    "index": 82
+                  "line": 2,
+                  "column": 36,
+                  "index": 49
                 }
+              }
             }
+          ],
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 5,
+              "index": 18
+            },
+            "end": {
+              "line": 2,
+              "column": 28,
+              "index": 41
+            }
+          }
         }
-    ]
+      ],
+      "comments": [],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "index": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 2,
+          "index": 82
+        }
+      }
+    }
+  ]
 }

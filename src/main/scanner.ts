@@ -280,7 +280,7 @@ export function createScanner(
 
     function singleLineComment(): void {
         let comment: string = ''
-
+        let emptyComment = false
         while (true) {
             if (
                 current() === '\n' ||
@@ -301,15 +301,23 @@ export function createScanner(
             }
 
             comment += current()
+        } else {
+            emptyComment = true
         }
 
         addToken(SyntaxType.CommentLine, comment.trim())
+
+        if (emptyComment) {
+            emptyComment = !emptyComment
+            nextLine()
+        }
     }
 
     // TODO: optimize the logic
     function multilineComment(): void {
         let comment: string = ''
         let cursor: number = 0
+        let commentBlockEnd = false
 
         while (true) {
             if (
@@ -355,11 +363,16 @@ export function createScanner(
             if ((peek() === '*' && peekNext() === '/') || isAtEnd()) {
                 advance()
                 advance()
+                commentBlockEnd = true
                 break
             }
         }
 
         addToken(SyntaxType.CommentBlock, comment.trim())
+        if (commentBlockEnd) {
+            commentBlockEnd = !commentBlockEnd
+            nextLine()
+        }
     }
 
     function string(terminator: string): void {
