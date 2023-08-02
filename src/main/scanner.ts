@@ -317,7 +317,6 @@ export function createScanner(
     function multilineComment(): void {
         let comment: string = ''
         let cursor: number = 0
-        let commentBlockEnd = false
 
         while (true) {
             if (
@@ -359,20 +358,17 @@ export function createScanner(
 
             advance()
 
-            // A comment goes until we find a comment terminator (*/).
-            if ((peek() === '*' && peekNext() === '/') || isAtEnd()) {
-                advance()
-                advance()
-                commentBlockEnd = true
-                break
+            // If the cross-line follows the terminator, there is no need to terminate.
+            if (current() !== '\n') {
+                // A comment goes until we find a comment terminator (*/).
+                if ((peek() === '*' && peekNext() === '/') || isAtEnd()) {
+                    advance()
+                    advance()
+                    break
+                }
             }
         }
-
         addToken(SyntaxType.CommentBlock, comment.trim())
-        if (commentBlockEnd) {
-            commentBlockEnd = !commentBlockEnd
-            nextLine()
-        }
     }
 
     function string(terminator: string): void {
